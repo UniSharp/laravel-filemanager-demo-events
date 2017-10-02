@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use App\FilePath;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,16 +13,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::create([
+        User::create([
             'name' => 'root',
             'email' => 'root@example.com',
             'password' => \Hash::make('root')
         ]);
 
-        \App\FilePath::create([
+        FilePath::create([
             'path' => '/photos/1/unisharp_logo.png',
         ]);
-        \App\FilePath::create([
+        FilePath::create([
+            'path' => '/photos/1/unisharp_logo_full.png',
+        ]);
+        FilePath::create([
             'path' => '/photos/1/unisharp_logo_full.png',
         ]);
 
