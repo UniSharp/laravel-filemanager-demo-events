@@ -16,8 +16,6 @@ class DeleteImageListener
      */
     public function handle(ImageIsDeleting $event)
     {
-
-
         // Get the public path for the file
         $publicFilePath = str_replace(public_path(), "", $event->path());
 
