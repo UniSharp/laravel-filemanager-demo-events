@@ -16,5 +16,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'root@example.com',
             'password' => \Hash::make('root')
         ]);
+
+        \App\FilePath::create([
+            'path' => '/photos/1/unisharp_logo.png',
+        ]);
+        \App\FilePath::create([
+            'path' => '/photos/1/unisharp_logo_full.png',
+        ]);
+
     }
 }
