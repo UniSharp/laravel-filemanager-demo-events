@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('login', function () {
     auth()->loginUsingId(1);
     return redirect()->intended();
-});
+})->name('login');
