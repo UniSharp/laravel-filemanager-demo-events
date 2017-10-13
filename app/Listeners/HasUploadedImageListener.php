@@ -4,7 +4,6 @@ namespace App\Listeners;
 use Unisharp\Laravelfilemanager\Events\ImageWasUploaded;
 use App\FilePath;
 
-
 class HasUploadedImageListener
 {
     /**

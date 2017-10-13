@@ -14,7 +14,6 @@ use App\Listeners\RenameImageListener;
 use App\Listeners\IsUploadingImageListener;
 use App\Listeners\HasUploadedImageListener;
 
-
 class EventServiceProvider extends ServiceProvider
 {
     /**

@@ -15,6 +15,8 @@ class IsUploadingImageListener
      */
     public function handle(ImageIsUploading $event)
     {
-        if (!Auth::guard('web')->check()) die('<p>You need to be logged in in order to upload files.</p>');
+        if (!Auth::guard('web')->check()) {
+            die('<p>You need to be logged in in order to upload files.</p>');
+        }
     }
 }

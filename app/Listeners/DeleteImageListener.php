@@ -22,7 +22,7 @@ class DeleteImageListener
         // Search for usages of the file
         $used = FilePath::where('path', $publicFilePath)->get();
 
-        if(count($used) > 0) {
+        if (count($used) > 0) {
             // The image is in use, create a response message
             $message = $this->formatMessage($used);
 
