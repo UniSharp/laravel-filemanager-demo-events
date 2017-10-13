@@ -7,9 +7,19 @@ This project already integrated [unisharp/laravel-filemanager](https://github.co
 3. `php artisan serve`
 4. Go to your browser and visit `localhost:8000/laravel-filemanager/demo`
 
-## Eventing examples
+## Event usage examples
 This project provides examples on how to use the eventing system with [laravel-filemanager](https://github.com/UniSharp/laravel-filemanager).
-The following events provide an example implementation:
+
+#### ImageIsUploading
+This event is fired before an image is saved. The event listener in [App\Listeners\IsUploadingImageListener](https://github.com/UniSharp/laravel-filemanager-demo-events/blob/master/app/Listeners/IsUploadingImageListener.php) does the following:
+1. Checks if hte user is currently logged in, if not aborts the request. 
+
+*Note: If you are using this example project you are automatically logged in, try playing around with it*
+
+#### ImageWasUploaded
+This event is fired before an image is saved. The event listener in [App\Listeners\HasUploadedImageListener](https://github.com/UniSharp/laravel-filemanager-demo-events/blob/master/app/Listeners/HasUploadedImageListener.php) does the following:
+1. Extracts the file path of the file that was just uploaded
+2. Saves the file path to the database
 
 #### ImageIsDeleting
 This event is fired before an image is deleted. The event listener in [App\Listeners\DeleteImageListener](https://github.com/UniSharp/laravel-filemanager-demo-events/blob/master/app/Listeners/DeleteImageListener.php) does the following:
